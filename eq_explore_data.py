@@ -20,7 +20,16 @@ for eq_dict in all_eq_dicts:
     lats.append(lat)
 
 # Map the earthqueakes.
-data = [Scattergeo(lon=lons, lat=lats)]
+
+# the simplest way to define the data for a chart in Plotly 
+#data = [Scattergeo(lon=lons, lat=lats)]
+
+# best way to define the data for a chart in Plotly
+data = [{
+    'type': 'scattergeo',
+    'lon': lons,
+    'lat': lats
+}]
 my_layout = Layout(title='Global Earthquakes')
 
 fig = {'data': data, 'layout': my_layout}
