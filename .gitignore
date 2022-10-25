@@ -4,6 +4,7 @@ __pycache__/
 
 # directories
 .vscode/
+results/
 
 # General
 .DS_Store
